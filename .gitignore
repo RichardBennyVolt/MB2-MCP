@@ -1,0 +1,36 @@
+node_modules/
+dist/
+*.log
+.tmp/
+
+# Local settings, credentials and keys — never publish
+.env
+.env.*
+!.env.example
+.npmrc
+.mcp.json
+.claude/
+.codex/
+.agents/
+.dsh/
+.aws/
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+id_rsa*
+id_ed25519*
+
+# Runtime output if a tool was pointed at this folder
+screenshot*.png
+*.capture.bmp
+walk_*.json
+coverage/
+*.tsbuildinfo
+*.tgz
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

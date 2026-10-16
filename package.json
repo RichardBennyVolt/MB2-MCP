@@ -1,0 +1,40 @@
+{
+  "name": "mb2-mcp",
+  "version": "0.3.0",
+  "description": "MCP server for Mount & Blade II: Bannerlord modding: game data, XSLT patches, localization, scenes, prefabs, assets and the live Modding Kit scene editor. Works with Claude Code, Codex and DeepSeek Harness.",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mb2-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "examples",
+    "README.md",
+    "README.zh-CN.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "doctor": "node dist/index.js doctor",
+    "docs": "npm run build && node scripts/gen-tools-doc.mjs",
+    "test": "npm run build && node --test test/unit.test.mjs test/protocol.test.mjs test/minimal-env.test.mjs test/e2e.test.mjs test/scene.test.mjs",
+    "privacy": "node scripts/privacy-check.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "@xmldom/xmldom": "^0.9.12",
+    "saxes": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "typescript": "~5.9.3"
+  }
+}

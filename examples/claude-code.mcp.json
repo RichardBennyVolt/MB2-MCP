@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "bannerlord": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["C:\\path\\to\\MB2-MCP\\dist\\index.js"],
+      "env": {
+        "MB2_GAME_DIR": "D:\\SteamLibrary\\steamapps\\common\\Mount & Blade II Bannerlord"
+      }
+    }
+  }
+}

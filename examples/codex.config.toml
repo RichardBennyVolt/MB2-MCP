@@ -1,0 +1,15 @@
+# Append to ~/.codex/config.toml (Codex CLI, desktop app and IDE extension share it).
+# `node dist/index.js config codex` prints this block with your real paths.
+
+[mcp_servers.bannerlord]
+command = 'C:\Program Files\nodejs\node.exe'
+args = ['C:\path\to\MB2-MCP\dist\index.js']
+startup_timeout_sec = 30
+tool_timeout_sec = 300
+# Read-only tools carry readOnlyHint, so only edits need approval.
+default_tools_approval_mode = "writes"
+
+[mcp_servers.bannerlord.env]
+MB2_GAME_DIR = 'D:\SteamLibrary\steamapps\common\Mount & Blade II Bannerlord'
+# Optional: folders with your own modules outside the game folder (writable)
+# MB2_MODULE_DIRS = 'D:\Mods'

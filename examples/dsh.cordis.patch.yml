@@ -1,0 +1,15 @@
+# DeepSeek Harness: merge this entry into ~/.dsh/profiles/<profile>/cordis.patch.yml
+# (or ~/.dsh/cordis.patch.yml for every profile). The file is a top-level YAML array,
+# so append the "- insert:" item next to the existing entries. dsh reloads automatically.
+# `node dist/index.js config dsh` prints it with your real paths.
+- insert:
+    - id: mcp-bannerlord
+      name: '@deepseek-ai/dsh-mcp-client'
+      config:
+        serverName: bannerlord
+        transport: stdio
+        command: 'C:\Program Files\nodejs\node.exe'
+        args: ['C:\path\to\MB2-MCP\dist\index.js']
+        env:
+          MB2_GAME_DIR: 'D:\SteamLibrary\steamapps\common\Mount & Blade II Bannerlord'
+        toolCallTimeoutMs: 300000
